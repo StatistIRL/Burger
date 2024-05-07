@@ -5,5 +5,5 @@ from django.shortcuts import render
 
 def main_page(request):
 
-    context = {}
+    context = {"section": "main"}
     return render(request, "burger/index.html", context=context)

@@ -43,7 +43,6 @@
 </div>
 <!-- slider_area_end -->
 
-
 <div class="best_burgers_area">
     <div class="container">
         <div class="row">
@@ -58,7 +57,7 @@
             <div class="col-xl-6 col-md-6 col-lg-6">
                 <div class="single_delicious d-flex align-items-center">
                     <div class="thumb">
-                        <img src="img/burger/1.png" alt="">
+                        {% comment %} <img src="" alt=""> {% endcomment %}
                     </div>
                     <div class="info">
                         <h3>Beefy Burgers</h3>
@@ -77,37 +76,8 @@
         </div>
     </div>
 </div>
-<!-- features_room_startt -->
-<div class="Burger_President_area">
-        <div class="Burger_President_here">
-            <div class="single_Burger_President">
-                <div class="room_thumb">
-                    <img src="img/burgers/1.png" alt="">
-                    <div class="room_heading d-flex justify-content-between align-items-center">
-                        <div class="room_heading_inner">
-                            <span>$20</span>
-                            <h3>The Burger President</h3>
-                            <p>Great way to make your business appear trust <br> and relevant.</p>
-                            <a href="#" class="boxed-btn3">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_Burger_President">
-                <div class="room_thumb">
-                    <img src="{% static 'img/burgers/2.png' %}" alt="">
-                    <div class="room_heading d-flex justify-content-between align-items-center">
-                        <div class="room_heading_inner">
-                            <span>$20</span>
-                            <h3>The Burger President</h3>
-                            <p>Great way to make your business appear trust <br> and relevant.</p>
-                            <a href="#" class="boxed-btn3">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+<!-- features_room_start -->
+{% include "president_area.html" %}
 <!-- features_room_end -->
 <!-- about_area_start -->
 <div class="about_area">
@@ -138,7 +108,7 @@
                         first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
                         with a handful of model sentence structures, to generate</p>
                     <div class="img_thumb">
-                        <img src="img/jessica-signature.png" alt="">
+                        <img src="{% static 'img/jessica-signature.png' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -162,47 +132,6 @@
 <!-- video_area_end -->
 
 <!-- testimonial_area_start  -->
-<div class="testimonial_area ">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title mb-60 text-center">
-                    <span>Testimonials</span>
-                    <h3>Happy Customers</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="testmonial_active owl-carousel">
-                    <!-- start feedback -->
-                    <div class="single_carousel">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="single_testmonial text-center">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec
-                                        sed
-                                        neque.</p>
-                                    <div class="testmonial_author">
-                                        <h4>Kristiana Chouhan</h4>
-                                        <div class="stars">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end feedback -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include "happy_customers.html" %}
 <!-- testimonial_area_ned  -->
 {% endblock content %}

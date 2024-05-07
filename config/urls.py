@@ -21,8 +21,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("", include("burger.urls", namespace="main")),
+    path("admin/", admin.site.urls),
+    path("menu/", include("menu.urls", namespace="menu")),
 ]
 
 if settings.DEBUG:

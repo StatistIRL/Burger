@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # APPS
     "burger",
+    "menu",
     # MODULES
     "debug_toolbar",
     "django_extensions",
