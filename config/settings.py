@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # MODULES
     "debug_toolbar",
     "django_extensions",
+    "compressor",
 ]
 
 MIDDLEWARE = [
@@ -127,9 +128,14 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = BASE_DIR / "static"
+
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "compressor.finders.CompressorFinder",
+)
 
 # MEDIA
 MEDIA_ROOT = BASE_DIR / "media"
@@ -139,3 +145,5 @@ MEDIA_URL = "media/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+COMPRESS_ENABLED = True
